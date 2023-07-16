@@ -15,6 +15,19 @@
     padding: 20px 25px;
 }
 
+.common-title {
+    color: #131313;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.common-description {
+    color: #727272;
+    font-size: 1rem;
+    line-height: 26px;
+    margin-bottom: 15px;
+}
+
 /* Header Styles */
 
 header {
@@ -26,11 +39,6 @@ nav {
     margin-bottom: 40px;
 }
 
-nav h2 {
-    color: #131313;
-    font-size: 2.8rem;
-    font-weight: 700;
-}
 
 header>nav {
     display: flex;
@@ -69,13 +77,6 @@ nav a {
     margin-bottom: 15px;
 }
 
-.banner-description {
-    color: #727272;
-    font-size: 1rem;
-    line-height: 26px;
-    margin-bottom: 15px;
-}
-
 .banner-img {
     width: 100%;
     margin-top: 15px;
@@ -86,7 +87,7 @@ nav a {
 
 main {
     margin: 80px auto;
-    padding: 0px 120px;
+    padding: 0px 113px;
 }
 
 .quick-features {
@@ -124,49 +125,99 @@ main {
     font-weight: 700;
 }
 
-.quick-heading{
+.quick-heading {
     margin-bottom: 10px;
 }
 
-.quick-text{
+.quick-text {
     padding: 0px 20px;
 }
 
-.hide{
+.hide {
     display: none;
+}
+
+/* Facts styles */
+.facts-container {
+    margin-top: 90px;
+}
+
+.facts-container .common-title {
+    margin-bottom: 10px;
+}
+
+.facts-head {
+    max-width: 545px;
+}
+
+.fact-box-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.fact-box {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    padding: 40px 30px;
+}
+
+.fact-number {
+    color: #424242;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.fact-description {
+    color:  #727272;
+    font-size: 1.12rem;
+    font-weight: 600;
 }
 
 /* Responsive Media Queries */
 /* Mobile Devices */
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 576px) {
     header {
         padding: 17px;
     }
 
-    header>nav {
+    header>nav, .fact-box-container {
         flex-direction: column;
     }
 
     nav h2 {
         margin-bottom: 15px;
     }
-    .quick-features{
+
+    .quick-features {
         flex-direction: column-reverse;
     }
-    .quick-img{
+
+    .quick-img {
         grid-template-columns: 1fr;
     }
-    main{
+
+    main {
         padding: 10px;
     }
+
     .team-img {
         width: 320px;
         height: 320px;
     }
+    .facts-head{
+        text-align: center;
+    }
+    .fact-box{
+        width: 250px;
+        margin: 10px auto;
+    }
 }
 
 /* Medium Devices */
-@media screen and (min-width: 616px) and (max-width: 992px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
     header>nav {
         flex-direction: column;
     }
@@ -178,10 +229,26 @@ main {
     nav h2 {
         margin-bottom: 15px;
     }
-    .quick-features{
+
+    .quick-features {
         flex-direction: column-reverse;
     }
-    main{
+
+    main {
         padding: 10px;
+    }
+
+    .team-img {
+        width: 270px;
+        height: 270px;
+    }
+    .facts-head{
+        text-align: center;
+        margin: auto;
+    }
+    .fact-box-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
 }
