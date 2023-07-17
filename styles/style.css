@@ -133,6 +133,82 @@ main {
     padding: 0px 20px;
 }
 
+/* List Features styles */
+
+.list-features {
+    margin-top: 110px;
+    display: flex;
+    gap: 0px 40px;
+}
+
+.list-features .common-title {
+    border-left: 5px solid #FF900E;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+}
+
+.list-features .common-description {
+    margin-bottom: 25px;
+}
+
+.features-box {
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    margin-bottom: 15px;
+    padding: 25px;
+}
+
+.box-title {
+    color: #131313;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.box-description {
+    color: #727272;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 26px;
+    /* 162.5% */
+}
+
+.box-img {
+    width: 540px;
+    height: 90%;
+}
+
+.experience-box {
+    border-radius: 8px;
+    background: #FF900E;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    top: -115px;
+    left: -47px;
+}
+
+.experience-text {
+    padding: 30px;
+    color: #FFFFFF;
+}
+
+.year-text {
+    color: #FFF;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+.just word {
+    color: #FFF;
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 40px;
+}
+
 /* Facts styles */
 .facts-container {
     margin-top: 90px;
@@ -172,6 +248,7 @@ main {
     font-weight: 600;
 }
 
+
 /* Footer Styles */
 
 footer .common-title {
@@ -195,7 +272,7 @@ footer .common-description {
 }
 
 .footer-end {
-    color:  #424242;
+    color: #424242;
     text-align: center;
     font-size: 1.2rem;
     font-weight: 400;
@@ -205,20 +282,23 @@ footer .common-description {
 /* Responsive Media Queries */
 /* Mobile Devices */
 @media screen and (max-width: 576px) {
+    /* Header media queries */
     header {
         padding: 17px;
     }
 
     header>nav,
-    .fact-box-container, 
-    .logo-container
-     {
+    .fact-box-container,
+    .logo-container,
+    .list-features {
         flex-direction: column;
     }
 
     nav h2 {
         margin-bottom: 15px;
     }
+
+    /* Quick Features Media Query */
 
     .quick-features {
         flex-direction: column-reverse;
@@ -237,6 +317,12 @@ footer .common-description {
         height: 320px;
     }
 
+    /* Facts Media Queries */
+
+    .facts-container {
+        margin-top: 30px;
+    }
+
     .facts-head {
         text-align: center;
     }
@@ -246,22 +332,57 @@ footer .common-description {
         margin: 10px auto;
     }
 
-    .logo-img{
+    /* Footer Media Queries */
+
+    .logo-img {
         width: 50%;
         margin: 20px auto;
     }
-    .common-description{
+
+    .common-description {
         margin-bottom: 0px;
         padding: 0px 10px;
     }
-    .footer-end{
+
+
+    .footer-end {
         padding: 0px 25px;
+    }
+
+    /* List Features Media Queries */
+
+    .box-img {
+        width: 100%;
+        margin: auto;
+        height: 700px;
+    } 
+    
+    .features-img-container{
+        width: 80%;
+        margin: auto;
+    }
+
+    .experience-box {
+        width: 170px;
+        text-align: center;
+        position: relative;
+        top: -85px;
+        left: -47px;
+    }
+    .experience-text{
+        padding: 15px;
+    }
+    .year-text{
+        font-size: 2rem;
+    }
+    .just word{
+        font-size: 20px;
     }
 }
 
 /* Medium Devices */
 @media screen and (min-width: 577px) and (max-width: 992px) {
-    header>nav {
+    header>nav, .list-features{
         flex-direction: column;
     }
 
@@ -286,17 +407,22 @@ footer .common-description {
         height: 270px;
     }
 
+    .facts-container {
+        margin-top: 30px;
+    }
+
     .facts-head {
         text-align: center;
         margin: auto;
     }
 
-    .fact-box-container{
+    .fact-box-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
     }
-    .logo-container{
+
+    .logo-container {
         display: grid;
         grid-template-columns: 170px 170px 140px;
         justify-items: center;
@@ -305,7 +431,27 @@ footer .common-description {
         margin: auto;
         margin-bottom: 80px;
     }
-    .logo-img{
+
+    .logo-img {
         width: 120px;
+    }
+
+    .features-img-container{
+        width: 90%;
+        margin: auto;
+    }
+
+    .box-img {
+        width: 100%;
+        margin: auto;
+        height: 750px;
+    } 
+
+    .experience-box {
+        /* width: 200px; */
+        text-align: center;
+        position: relative;
+        top: -100px;
+        left: -10px;
     }
 }
